@@ -5,7 +5,7 @@
 
                 <h1>404</h1>
 
-                <p>It looks like nothing was found at this location. Maybe try a search?</p>
+                <p>It looks like nothing was found at this location. Maybe try a search??</p>
 
                 <p><?php get_search_form(); ?></p>
 
