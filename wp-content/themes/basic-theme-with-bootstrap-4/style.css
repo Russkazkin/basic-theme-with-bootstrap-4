@@ -150,6 +150,11 @@ footer {
 .bottom-wrapper {
     padding: .5rem 0;
 }
+/*PAGE*/
+.page figcaption {
+    color: #fff;
+}
+/*/PAGE*/
 /*VANTAGES*/
 .vantages-items-wrap {
     margin-left: -.5rem;
