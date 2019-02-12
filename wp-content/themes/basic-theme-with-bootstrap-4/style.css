@@ -142,6 +142,9 @@ h1 {
     text-decoration: none;
     background-color: var(--main-bg-color-hover);
 }
+.header-bottom .form-inline {
+    flex-wrap: nowrap;
+}
 /*/MENU*/
 footer {
     background-color: var(--nav-bg-color);
