@@ -112,6 +112,9 @@ h1 {
 .header-top-contacts-email a:focus {
     text-decoration: underline;
 }
+.header-top-contacts {
+    text-align: right;
+}
 /*/HEADER*/
 /*MENU*/
 .navbar-bss {
@@ -224,3 +227,14 @@ footer {
     text-shadow: var(--text-shadow);
 }
 /*/JUMBOTRON*/
+/*MEDIA*/
+@media screen and (max-width: 767px) {
+    .header-top,
+    .header-top-contacts {
+        text-align: center;
+    }
+    .header-top-info img {
+        width: 50%;
+    }
+}
+/*/MEDIA*/

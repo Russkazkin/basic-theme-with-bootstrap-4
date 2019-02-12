@@ -39,7 +39,7 @@
                         <?php endif;?>
                     <?php endif;?>
                 </div>
-                <div class="header-top-contacts col-md-5 text-right">
+                <div class="header-top-contacts col-md-5">
                     <div class="header-top-contacts-phone">
                         <a href="tel:<?= preg_replace('/[^+0-9]/', '', get_theme_mod('phone')) ?>">
                             <?= get_theme_mod('phone') ?>
