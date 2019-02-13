@@ -14,6 +14,7 @@
         </div>
     </div>
 </footer>
+<?php do_action('after_footer_block'); ?>
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -31,6 +31,7 @@ include_once(get_template_directory() . '/customizer/custom_jumbotron.php');
 require_once(get_template_directory() . '/inc/bbs_slider.php');
 require_once(get_template_directory() . '/inc/bbs_vantages.php');
 require_once(get_template_directory() . '/inc/bbs_jumbotron.php');
+require_once(get_template_directory() . '/inc/bbs_form_modal.php');
 
 // Register WordPress nav menu
 register_nav_menu('top', 'Top menu');
