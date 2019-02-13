@@ -13,7 +13,17 @@ function frontPageJumbotron(){ ?>
             <?php if(!get_theme_mod('hideJumbotronSmallText', false)): ?>
             <p><?= get_theme_mod('JumbotronSmallText', 'It uses utility classes for typography and spacing to space content out within the larger container.');?></p>
             <?php endif; ?>
-            <button type="button" class="btn btn-info btn-lg btn-bss">Order</button>
+            <?php if(!get_theme_mod('hideJumbotronButton', false)): ?>
+                <?php if( 'link' == get_theme_mod('jumbotronButton', 'link')): ?>
+                    <a href="#" role="button" class="btn btn-info btn-lg btn-bss">
+                        <?= get_theme_mod('JumbotronButtonText', 'Push me');?>
+                    </a>
+                <?php else:?>
+                    <button type="button" class="btn btn-info btn-lg btn-bss" data-toggle="modal" data-target="#mainFormModal">
+                        <?= get_theme_mod('JumbotronButtonText', 'Push me');?>
+                    </button>
+                <?php endif; ?>
+            <?php endif; ?>
         </div>
     </div>
 <?php }

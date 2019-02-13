@@ -117,5 +117,55 @@ function bbsCustomJumbotron( $wp_customize ){
             'type'      => 'checkbox'
         )
     );
+    $wp_customize->add_setting(
+        'JumbotronButtonText',
+        array(
+            'default' => 'Push me',
+            'sanitize_callback' => 'bbsSanitize',
+            'transport' => 'refresh'
+        )
+    );
+    $wp_customize->add_control(
+        'JumbotronButtonText',
+        array(
+            'section' => 'jumbotronOptions',
+            'label' => 'Jumbotron button\'s text',
+            'type' => 'text'
+        )
+    );
+    $wp_customize->add_setting(
+        'jumbotronButton',
+        array(
+            'default'   => 'link',
+            'transport' => 'refresh'
+        )
+    );
+    $wp_customize->add_control(
+        'jumbotronButton',
+        array(
+            'section'  => 'jumbotronOptions',
+            'label'    => 'Button functionality',
+            'type'     => 'radio',
+            'choices'  => array(
+                'link'    => 'Simple link',
+                'modal'   => 'Open modal with form'
+            )
+        )
+    );
+    $wp_customize->add_setting(
+        'hideJumbotronButton',
+        array(
+            'default' => false,
+            'transport' => 'refresh'
+        )
+    );
+    $wp_customize->add_control(
+        'hideJumbotronButton',
+        array(
+            'section'   => 'jumbotronOptions',
+            'label'     => 'Hide jumbotron\'s button',
+            'type'      => 'checkbox'
+        )
+    );
 }
 add_action( 'customize_register', 'bbsCustomJumbotron' );
