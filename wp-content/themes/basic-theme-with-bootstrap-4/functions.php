@@ -26,6 +26,7 @@ include_once(get_template_directory() . '/customizer/customizer.php');
 include_once(get_template_directory() . '/customizer/custom_slider.php');
 include_once(get_template_directory() . '/customizer/custom_vantages.php');
 include_once(get_template_directory() . '/customizer/custom_jumbotron.php');
+include_once(get_template_directory() . '/customizer/custom_modal.php');
 
 // Template parts
 require_once(get_template_directory() . '/inc/bbs_slider.php');

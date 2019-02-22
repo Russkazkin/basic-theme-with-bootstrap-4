@@ -145,7 +145,7 @@ function bbsCustomJumbotron( $wp_customize ){
         array(
             'section'  => 'jumbotronOptions',
             'label'    => 'Button functionality',
-            'description' => 'You can customize your modal <a href="/wp-admin/customize.php?autofocus[panel]=vantagesOptions">here</a>',
+            'description' => 'You can customize your modal <a href="/wp-admin/customize.php?autofocus[section]=modalOptions">here</a>',
             'type'     => 'radio',
             'choices'  => array(
                 'link'    => 'Simple link',
