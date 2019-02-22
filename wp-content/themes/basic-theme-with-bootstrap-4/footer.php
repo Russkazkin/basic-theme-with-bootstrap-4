@@ -14,7 +14,14 @@
         </div>
     </div>
 </footer>
-<?php do_action('after_footer_block'); ?>
+
+<?php
+/**
+ * after_footer_block hook.
+ *
+ * @hooked mainFormModal - 10 (/inc/bbs_form_modal.php - outputs jumbotron form)
+ */
+do_action('after_footer_block'); ?>
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -154,6 +154,22 @@ function bbsCustomJumbotron( $wp_customize ){
         )
     );
     $wp_customize->add_setting(
+        'JumbotronButtonLink',
+        array(
+            'default' => '#',
+            'sanitize_callback' => 'bbsSanitizeTags',
+            'transport' => 'refresh'
+        )
+    );
+    $wp_customize->add_control(
+        'JumbotronButtonLink',
+        array(
+            'section' => 'jumbotronOptions',
+            'label' => 'Jumbotron button\'s link',
+            'type' => 'text'
+        )
+    );
+    $wp_customize->add_setting(
         'hideJumbotronButton',
         array(
             'default' => false,

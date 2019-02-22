@@ -15,7 +15,7 @@ function frontPageJumbotron(){ ?>
             <?php endif; ?>
             <?php if(!get_theme_mod('hideJumbotronButton', false)): ?>
                 <?php if( 'link' == get_theme_mod('jumbotronButton', 'link')): ?>
-                    <a href="#" role="button" class="btn btn-info btn-lg btn-bss">
+                    <a href="<?= get_theme_mod('JumbotronButtonLink', '#');?>" role="button" class="btn btn-info btn-lg btn-bss">
                         <?= get_theme_mod('JumbotronButtonText', 'Push me');?>
                     </a>
                 <?php else:?>

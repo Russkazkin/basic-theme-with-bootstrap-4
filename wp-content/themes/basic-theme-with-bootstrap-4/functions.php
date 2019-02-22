@@ -51,4 +51,8 @@ function bbsSanitize( $value ){
 	return strip_tags( stripslashes( $value ) );
 }
 
+function bbsSanitizeTags( $value ){
+    return strip_tags(  $value  );
+}
+
 add_theme_support( 'post-thumbnails' );
