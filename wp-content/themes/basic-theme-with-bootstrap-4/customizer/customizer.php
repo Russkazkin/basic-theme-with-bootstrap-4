@@ -60,7 +60,7 @@ function bbsCustomizerInit( $wp_customize ){
         'footer_text',
         array(
             'default' => 'Basic Bootstrap Theme',
-            'sanitize_callback' => 'bbsSanitize',
+            'sanitize_callback' => '',
             'transport' => 'refresh'
         )
     );
