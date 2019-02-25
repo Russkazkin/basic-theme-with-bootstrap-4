@@ -14,7 +14,7 @@ function bbsCustomizerInit( $wp_customize ){
         'phone',
 		 array(
 		     'section' => 'title_tagline',
-		     'label' => 'Телефон',
+		     'label' => 'Phone',
 		     'type' => 'text'
 		 )
     );
@@ -49,11 +49,28 @@ function bbsCustomizerInit( $wp_customize ){
 			'logo',
 			array(
 				'section' => 'title_tagline',
-				'label' => 'Логотип',
-				'description' => 'Добавление логотипа сайта (JPG/PNG)',
+				'label' => 'Logo',
+				'description' => 'Add site logo (JPG/PNG)',
 				'type' => 'image'
 			)
 		)
 	);
+    //Footer link
+    $wp_customize->add_setting(
+        'footer_text',
+        array(
+            'default' => 'Basic Bootstrap Theme',
+            'sanitize_callback' => 'bbsSanitize',
+            'transport' => 'refresh'
+        )
+    );
+    $wp_customize->add_control(
+        'footer_text',
+        array(
+            'section' => 'title_tagline',
+            'label' => 'Footer Text',
+            'type' => 'text'
+        )
+    );
 }
 add_action( 'customize_register', 'bbsCustomizerInit' );
