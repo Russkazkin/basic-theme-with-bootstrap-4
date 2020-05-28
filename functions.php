@@ -1,9 +1,8 @@
 <?php
 
 function enqueue_styles() {
-
-	wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/libs/node_modules/@fortawesome/fontawesome-free/css/all.min.css', null, '4.5.0');
-	wp_enqueue_style('fontawesome-style', get_template_directory_uri() . '/libs/fontawesome/css/all.min.css', null, '5.13.0');
+    wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/libs/node_modules/bootstrap/dist/css/bootstrap.min.css', null, '4.5.0');
+	wp_enqueue_style('fontawesome-style', get_template_directory_uri() . '/libs/node_modules/@fortawesome/fontawesome-free/css/all.min.css', null, '5.13.0');
 	wp_register_style('font-style', '//fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Montserrat:400,700|Roboto+Slab&display=swap&subset=cyrillic');
 	wp_enqueue_style( 'font-style');
 	wp_enqueue_style( 'basic-bs4-style', get_stylesheet_uri());
