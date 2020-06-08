@@ -6,6 +6,8 @@ function enqueue_styles() {
 	wp_register_style('font-style', '//fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Montserrat:400,700|Roboto+Slab&display=swap&subset=cyrillic');
 	wp_enqueue_style( 'font-style');
 	wp_enqueue_style( 'basic-bs4-style', get_stylesheet_uri());
+    wp_enqueue_style('main-style', get_template_directory_uri() . '/resources/css/main.min.css', null, '0.0.1');
+
 }
 add_action('wp_enqueue_scripts', 'enqueue_styles');
 
