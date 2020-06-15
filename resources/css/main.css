@@ -6,4 +6,13 @@
   font-size: 9px;
 }
 
+pre {
+  color: white;
+}
+
+.badge-skazkin {
+  background-color: var(--main-bg-color-hover);
+  color: #fff;
+}
+
 /*# sourceMappingURL=main.css.map */

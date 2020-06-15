@@ -13,9 +13,17 @@
 		<section class="page-content">
 			<?php if (have_posts()): while (have_posts()): the_post(); ?>
             <div class="post-excerpt-item-wrap mb-md-4 mb-2">
-                <div class="post-excerpt-item-meta">
+                <div class="post-excerpt-item-meta d-flex justify-content-between align-items-center mb-2">
                     <div class="post-excerpt-item-meta-date">
                         <?=date('d-m-Y', get_the_time('U'));?>
+                    </div>
+                    <div class="post-excerpt-item-meta-tags">
+                        <?php
+                            $tags = wp_get_post_tags($post->ID);
+                            foreach ($tags as $tag): ?>
+                                <span class="badge badge-skazkin"><?= $tag->name?></span>
+                        <?php endforeach; ?>
+
                     </div>
                 </div>
                 <h3>
@@ -25,7 +33,9 @@
 		            <?php the_content('Читать'); ?>
                 </div>
             </div>
-            <?php ?>
+            <?php
+                // my_dump(wp_get_post_tags($post->ID));
+                ?>
 			<?php endwhile;
 				the_posts_pagination([
                     'show_all' => true,
