@@ -25,6 +25,7 @@
 		            <?php the_content('Читать'); ?>
                 </div>
             </div>
+            <?php ?>
 			<?php endwhile;
 				the_posts_pagination([
                     'show_all' => true,

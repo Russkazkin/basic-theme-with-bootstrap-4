@@ -82,3 +82,38 @@ function my_navigation_template( $template, $class ){
 	</nav>    
 	';
 }
+
+//helpers
+//Redirect 404
+function redirect404() {
+    global $wp_query;
+    $wp_query->set_404();
+    status_header( 404 );
+    get_template_part( 404 ); exit();
+}
+
+function authorCheck($post_ID = null)
+{
+    $post_ID = $post_ID ?? get_the_ID();
+    if(get_post_field('post_author', $post_ID) != get_current_user_id()) {
+        redirect404();
+    }
+}
+
+//My Dump
+function my_dump($var, $die = false) {
+    echo '<pre>';
+    var_dump($var);
+    echo '</pre>';
+    if($die) {
+        die;
+    }
+}
+
+//Поддержка сессий в WP
+function start_session() {
+    if(!session_id()) {
+        session_start();
+    }
+}
+add_action('init', 'start_session', 1);
