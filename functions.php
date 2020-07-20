@@ -135,6 +135,15 @@ function metrics() { ?>
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/65631721" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173082724-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-173082724-1');
+    </script>
 <?php }
 
 add_action('wp_head', 'metrics');
