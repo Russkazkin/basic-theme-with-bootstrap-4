@@ -21,7 +21,9 @@
                         <?php
                             $tags = wp_get_post_tags($post->ID);
                             foreach ($tags as $tag): ?>
-                                <span class="badge badge-skazkin"><?= $tag->name?></span>
+                                <a href="<?= get_tag_link($tag->term_id)?>">
+                                    <span class="badge badge-skazkin"><?= $tag->name; ?></span>
+                                </a>
                         <?php endforeach; ?>
 
                     </div>
