@@ -116,7 +116,7 @@ function start_session() {
         session_start();
     }
 }
-add_action('init', 'start_session', 1);
+//add_action('init', 'start_session', 1);
 
 //Метрики
 
